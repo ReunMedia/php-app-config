@@ -1,0 +1,29 @@
+{
+    "name": "reun/php-app-config",
+    "description": "",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Kimmo Salmela",
+            "email": "kimmo.salmela@reun.eu"
+        },
+        {
+            "name": "Reun Media",
+            "email": "company@reun.eu",
+            "homepage": "https://reun.eu"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Reun\\PhpAppConfig\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {},
+    "config": {
+        "sort-packages": true
+    }
+}

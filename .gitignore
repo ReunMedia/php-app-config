@@ -1,0 +1,77 @@
+#
+# .gitignore for web projects.
+#
+# @author Reun Media <company@reun.eu>
+# @copyright 2020-2023 Reun Media
+#
+# @see https://github.com/Reun-Media/project-templates/blob/master/base/webdev/.gitignore
+#
+# @version 3.1.0
+#
+# @since 2024-05-29 Last modification date
+#
+
+#########################
+# Files and directories #
+#########################
+# Development directories
+# Underscore prefix is used for temporary, data and development directories,
+# such as `_build`, `_data` or `_project`.
+/_*
+**/_*/**
+
+# Environment variables
+# Define default variables in `.env.example`. Developers should supply their own
+# environment variables (e.g. by copying the example file).
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules
+vendor/
+
+# Logs and temporary files
+logs
+*.log
+.tmp
+tmp
+temp
+
+# Build directories
+dist
+
+#########
+# Tools #
+#########
+.phpunit.result.cache
+.yo-repository
+
+###########
+# Editors #
+###########
+# VS Code
+# Copied from https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+######
+# OS #
+######
+.DS_Store
+Thumbs.db
+
+###########
+# Project #
+###########
+# Add project specific ignores below.
