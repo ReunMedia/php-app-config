@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Reun\Cms\Common\App\Definitions;
-
-use Reun\PhpAppConfig\Config\AbstractAppConfig;
+namespace Reun\PhpAppConfig\Config;
 
 interface DefinitionsInterface
 {
