@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Reun\PhpAppConfig\Config;
 
-abstract class AbstractAppConfig extends \ArrayObject
+abstract class AbstractAppConfig
 {
     public const DEV = "dev";
     public const PROD = "prod";
