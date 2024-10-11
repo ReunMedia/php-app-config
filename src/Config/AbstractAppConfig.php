@@ -62,14 +62,7 @@ abstract class AbstractAppConfig
     /**
      * PHP locale.
      */
-    public string $phpLocale = "fi_FI.UTF-8";
-
-    /**
-     * PHP locale on Windows. Replaces `$phpLocale` with this value when running
-     * on Windows. This variable must be set because the locale values are
-     * different on Windows. @see https://www.php.net/manual/en/function.setlocale.php.
-     */
-    public string $phpLocaleWindows = "fin";
+    public string $phpLocale = "en_US.UTF-8";
 
     /**
      * Default timezone. It is highly recommended to use UTC and only convert to
@@ -100,11 +93,6 @@ abstract class AbstractAppConfig
         $this->cacheDirectory = "{$this->dataDirectory}/cache";
         $this->webroot = "{$this->projectRoot}/www";
         $this->buildMetaDirectory = "{$this->projectRoot}/_build-meta";
-
-        // Detect if running on Windows and change locale.
-        if ("WIN" === strtoupper(substr(\PHP_OS, 0, 3))) {
-            $this->phpLocale = $this->phpLocaleWindows;
-        }
 
         // Check if running in CLI mode
         $this->sapiMode = \PHP_SAPI == "cli"
