@@ -13,14 +13,16 @@ abstract class AbstractAppConfig
     public const SAPI_CLI = "cli";
 
     /**
-     * Project root directory. Uses `getcwd()` by default.
+     * Project root directory.
+     *
+     * Uses `getcwd()` by default.
      */
     public string $projectRoot;
 
     /**
-     * Data directory path. Data stored in this directory is not persisted between
-     * deployments. Use `$sharedDataDirectory` if you need to persist data between
-     * deployments.
+     * Data directory path. Data stored in this directory is not persisted
+     * between deployments. Use `$sharedDataDirectory` if you need to persist
+     * data between deployments.
      *
      * Default: "$projectRoot/_data".
      */
@@ -30,9 +32,7 @@ abstract class AbstractAppConfig
      * Shared data directory path. Data stored in this directory is persisted
      * between deployments.
      *
-     * *WARNING: Changing this directory is not recommended, since the deployment
-     * script will still only consider `_data-shared` as the only shared
-     * directory.*
+     * Changing this directory after initial deployment is not recommended.
      *
      * Default: "$projectRoot/_data-shared"
      */
