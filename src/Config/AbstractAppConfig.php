@@ -107,13 +107,16 @@ abstract class AbstractAppConfig
         }
 
         // Check if running in CLI mode
-        $this->sapiMode = "cli" === \PHP_SAPI ? static::SAPI_CLI : static::SAPI_WEB;
+        $this->sapiMode = \PHP_SAPI == "cli"
+            ? static::SAPI_CLI
+            : static::SAPI_WEB;
 
         // Set dev if running in CLI or hostname is localhost
-        if ($this->sapiMode === static::SAPI_CLI || \in_array($_SERVER["REMOTE_ADDR"], ["127.0.0.1", "::1"])) {
+        if ($this->sapiMode === static::SAPI_CLI
+            || \PHP_SAPI == "cli-server"
+            || \in_array($_SERVER["REMOTE_ADDR"], ["127.0.0.1", "::1"])
+        ) {
             $this->projectEnv = static::DEV;
-        } else {
-            $this->projectEnv = static::PROD;
         }
     }
 
