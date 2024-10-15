@@ -22,8 +22,22 @@
     "require": {
         "php": "^8.0"
     },
-    "require-dev": {},
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.44",
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "phpstan/phpstan": "^1.12"
+    },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
+    },
+    "scripts": {
+        "lint": [
+            "composer normalize",
+            "vendor/bin/php-cs-fixer fix .",
+            "vendor/bin/phpstan"
+        ]
     }
 }
