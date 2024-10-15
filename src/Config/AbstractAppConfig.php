@@ -87,7 +87,7 @@ abstract class AbstractAppConfig
     public function __construct()
     {
         // Setup directories.
-        $this->projectRoot = getcwd();
+        $this->projectRoot = getcwd() ?: "";
         $this->dataDirectory = "{$this->projectRoot}/_data";
         $this->sharedDataDirectory = "{$this->projectRoot}/_data-shared";
         $this->cacheDirectory = "{$this->dataDirectory}/cache";
