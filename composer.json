@@ -1,8 +1,8 @@
 {
     "name": "reun/php-app-config",
     "description": "",
-    "type": "library",
     "license": "proprietary",
+    "type": "library",
     "authors": [
         {
             "name": "Kimmo Salmela",
@@ -14,11 +14,6 @@
             "homepage": "https://reun.eu"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "Reun\\PhpAppConfig\\": "src/"
-        }
-    },
     "require": {
         "php": "^8.0"
     },
@@ -27,11 +22,16 @@
         "friendsofphp/php-cs-fixer": "^3.64",
         "phpstan/phpstan": "^1.12"
     },
+    "autoload": {
+        "psr-4": {
+            "Reun\\PhpAppConfig\\": "src/"
+        }
+    },
     "config": {
-        "sort-packages": true,
         "allow-plugins": {
             "ergebnis/composer-normalize": true
-        }
+        },
+        "sort-packages": true
     },
     "scripts": {
         "lint": [
