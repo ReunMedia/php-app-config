@@ -1,6 +1,6 @@
 {
     "name": "reun/php-app-config",
-    "description": "",
+    "description": "Reusable base configuration for PHP apps",
     "license": "MIT",
     "type": "library",
     "authors": [
