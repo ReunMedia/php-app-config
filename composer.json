@@ -1,7 +1,7 @@
 {
     "name": "reun/php-app-config",
     "description": "",
-    "license": "proprietary",
+    "license": "MIT",
     "type": "library",
     "authors": [
         {
