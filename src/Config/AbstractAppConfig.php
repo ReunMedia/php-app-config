@@ -87,7 +87,12 @@ abstract class AbstractAppConfig
     public function __construct()
     {
         // Setup directories.
-        $this->projectRoot = getcwd() ?: "";
+        $this->projectRoot = (string) getcwd();
+
+        if ("" === $this->projectRoot) {
+            throw new \Exception("Unable to set project root from current working directory. `getcwd()` failed.");
+        }
+
         $this->dataDirectory = "{$this->projectRoot}/_data";
         $this->sharedDataDirectory = "{$this->projectRoot}/_data-shared";
         $this->cacheDirectory = "{$this->dataDirectory}/cache";
@@ -95,14 +100,14 @@ abstract class AbstractAppConfig
         $this->buildMetaDirectory = "{$this->projectRoot}/_build-meta";
 
         // Check if running in CLI mode
-        $this->sapiMode = \PHP_SAPI == "cli"
+        $this->sapiMode = \PHP_SAPI === "cli"
             ? static::SAPI_CLI
             : static::SAPI_WEB;
 
         // Set dev if running in CLI or hostname is localhost
         if ($this->sapiMode === static::SAPI_CLI
-            || \PHP_SAPI == "cli-server"
-            || \in_array($_SERVER["REMOTE_ADDR"], ["127.0.0.1", "::1"])
+            || \PHP_SAPI === "cli-server"
+            || \in_array($_SERVER["REMOTE_ADDR"], ["127.0.0.1", "::1"], true)
         ) {
             $this->projectEnv = static::DEV;
         }
