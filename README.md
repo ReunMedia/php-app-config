@@ -1,6 +1,7 @@
 # PHP App Config
 
-<img alt="PHP 8.3 badge" src="https://img.shields.io/badge/PHP-8.3-777BB4?logo=php">
+[![Supported PHP Version](https://img.shields.io/packagist/dependency-v/reun/php-app-config/PHP?logo=PHP&logoColor=777BB3&color=777BB3)](https://www.php.net/supported-versions.php)
+[![Packagist Version](https://img.shields.io/packagist/v/reun/php-app-config)](https://packagist.org/packages/reun/php-app-config)
 
 Reusable configuration for PHP apps.
 
