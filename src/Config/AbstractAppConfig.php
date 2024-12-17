@@ -6,11 +6,11 @@ namespace Reun\PhpAppConfig\Config;
 
 abstract class AbstractAppConfig
 {
-    public const DEV = "dev";
-    public const PROD = "prod";
+    final public const DEV = "dev";
+    final public const PROD = "prod";
 
-    public const SAPI_WEB = "web";
-    public const SAPI_CLI = "cli";
+    final public const SAPI_WEB = "web";
+    final public const SAPI_CLI = "cli";
 
     /**
      * Project root directory.
