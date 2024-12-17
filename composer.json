@@ -20,7 +20,7 @@
     "require-dev": {
         "ergebnis/composer-normalize": "^2.44",
         "friendsofphp/php-cs-fixer": "^3.64",
-        "phpstan/phpstan": "^1.12",
+        "phpstan/phpstan": "^2.0",
         "slim/slim": "^4.14"
     },
     "autoload": {
