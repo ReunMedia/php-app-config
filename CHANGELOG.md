@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and [Common Changelog](https://common-changelog.org/), and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2024-12-19
+
+### Changed
+
+- **Breaking:** `AbstractAppConfig` constants (`DEV`, `PROD`, `SAPI_*`) are now
+  `final`. They shouldn't have been overridden anyway, but if you did, you now
+  get an error.
+
+### Added
+
+- Add `AppMiddlewareInterface` that can be used to define application middleware
+
+### Fixed
+
+- `AbstractAppConfig` now throws an exception if `getcwd()` fails to set project
+  root directory. Previously it just silently set it to `""`, which caused
+  unexpected behaviour.
+
 ## [0.3.0] - 2024-11-21
 
 First public release.
@@ -32,6 +50,7 @@ First public release.
 
 Initial release based on `reun/cms-common`.
 
+[0.4.0]: https://github.com/Reun-Media/php-app-config/releases/tag/0.4.0
 [0.3.0]: https://github.com/Reun-Media/php-app-config/releases/tag/0.3.0
 [0.2.0]: https://github.com/Reun-Media/php-app-config/releases/tag/0.2.0
 [0.1.0]: https://github.com/Reun-Media/php-app-config/releases/tag/0.1.0
