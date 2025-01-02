@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and [Common Changelog](https://common-changelog.org/), and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.1] - 2025-01-02
+
+### Changed
+
+- Deprecate `AppMiddlewareInterface`. Middleware should be handled in
+  application configuration. An implementation can be found in
+  [reun/php-app-definitions](https://github.com/Reun-Media/php-app-definitions).
+
 ## [0.4.0] - 2024-12-19
 
 ### Changed
@@ -50,6 +58,7 @@ First public release.
 
 Initial release based on `reun/cms-common`.
 
+[0.4.1]: https://github.com/Reun-Media/php-app-config/releases/tag/0.4.1
 [0.4.0]: https://github.com/Reun-Media/php-app-config/releases/tag/0.4.0
 [0.3.0]: https://github.com/Reun-Media/php-app-config/releases/tag/0.3.0
 [0.2.0]: https://github.com/Reun-Media/php-app-config/releases/tag/0.2.0
